@@ -12,10 +12,15 @@ router.get('/', function(req, res, next) {
     })
   } else {
     res.send({
-      login:false
+      header:{
+        resultCode:900,
+        connect:'ok'
+      },
+      data:{
+        login:false,
+      }
     })
   }
-  
 });
 
 module.exports = router;
